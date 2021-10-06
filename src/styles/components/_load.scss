@@ -1,0 +1,19 @@
+.load{
+    height: 80px;
+    width: 80px;
+    border-radius: 0px;
+    margin-left: 50%;
+    margin-top: 12px;
+    animation:  loading 2s linear infinite;
+    //background-image: url('assets/images/loader.png');
+    border-radius: 50%;
+    border-top: 5px outset rgba(254, 217, 65, 1) ;
+}
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

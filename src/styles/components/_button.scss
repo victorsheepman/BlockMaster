@@ -1,0 +1,15 @@
+.button-modal{
+    @include button(274px,rgba(254, 217, 65, 1));
+    &--black{
+        @include button(274px,rgba(12, 14, 22, 1))
+    }
+}
+.button-hero{
+    @include button(195px,rgba(254, 217, 65, 1));
+    margin-right: 16px;
+    border-radius: 4px;
+    &--black{
+        @include button(213px,rgba(12, 14, 22, 1));
+        border-radius: 4px;
+    }
+}

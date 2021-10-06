@@ -1,0 +1,4 @@
+@function porcentaje($width){
+    @return  $width * 100%/1366;
+ };
+ 

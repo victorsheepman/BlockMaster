@@ -1,0 +1,10 @@
+.container{
+    width: porcentaje(1200);
+    height: 579px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}

@@ -1,0 +1,37 @@
+
+.normal{
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    width: 114px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0px 50px 50px 0px ;
+    border: 3px solid #0E3FA9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: white;
+
+}
+.recommended{
+    @extend .normal;
+    border: 3px solid goldenrod;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    color: white;
+    background-color: #0f0e17;
+    font-family: 'Montserrat', sans-serif;
+  }
