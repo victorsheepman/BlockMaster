@@ -1,8 +1,8 @@
 import { createStore } from './redux/index';
 import reducer from './reducers/index';
 import movies from './movie';
+
 import { getAllIds, getLeastValuedIds, getMostValuedIds, movieListAsMap } from './normalize';
-import { photog } from './reducers/index';
 const initialState={
     movieList: movieListAsMap(movies),
     filter: 'all',
@@ -19,7 +19,7 @@ const initialState={
         }
 
     },
-    photo: photog[0],
+    photo: []
 }
 const store = createStore(reducer, initialState);
 

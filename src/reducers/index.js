@@ -16,7 +16,10 @@ function filterByTitle(title, movies) {
     })
     return list
 }
-  
+  function getPoster(number){
+      const photo = [ "mulan.jpg", "raya.jpg", "unidos.jpg" ]
+      return photo[number];
+  }
 function findById(id, allIds) {
     const parseId = parseInt(id, 10)
     if (allIds.includes(parseId)) {
@@ -31,7 +34,7 @@ function searchMovie(query, list, allIds) {
     }
     return findById(query, allIds)
 }
-export let photog = ["mulan.jpg", "raya.jpg", "unidos.jpg"]
+
 
 
 
@@ -88,8 +91,9 @@ const reducer  = (state,{type, payload}) => {
         case GALERY:
             return {
                 ...state,
-                photo: photog[payload]
+                photo: getPoster(payload)
             }
+            debugger;
         default:
             return state
         break;

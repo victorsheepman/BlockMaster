@@ -35,31 +35,30 @@ class galery extends Component{
         })
     }
     render(){
-        const state = store.getState();
-        const { photo } = state;
-        const imga = `assets/images/${photo}`;
-        console.log(imga);
+        const { photo } = this.props
         return card({
+            class:'card',
             children: [img({
                 src:`assets/images/${photo}`
             }), wrapperButton({
-                children:[button({
-                    class:'button-hero',
-                    children: createElement('figure', {
-                        children: createElement('img',{
-                            src: 'assets/icons/Property 1=play.svg'
+                children:[
+                    button({
+                        class:'button-hero',
+                        children: createElement('figure', {
+                            children: createElement('img',{
+                                src: 'assets/icons/Property 1=play.svg'
+                            })
                         })
-                    })
-                }, 'VER AHORA'), 
-                button({
-                    class:'button-hero--black',
-                    children:createElement('figure', {
-                        children: createElement('img',{
-                            src: 'assets/icons/Property 1=plus.svg'
-                        })
-                    })  
-                }, 'VER DESPUÉS')
-            ]
+                    }, 'VER AHORA'), 
+                    button({
+                        class:'button-hero--black',
+                        children:createElement('figure', {
+                            children: createElement('img',{
+                                src: 'assets/icons/Property 1=plus.svg'
+                            })
+                        })  
+                    }, 'VER DESPUÉS')
+                ]
             })]
         })
     }

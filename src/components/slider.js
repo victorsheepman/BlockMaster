@@ -28,29 +28,43 @@ const button = styled.div`
     background-color: white;
 `
 class slider extends Component{
+    state = {
+        photo: 'mulan.jpg',
+        list: {
+            mulan: "mulan.jpg",
+            raya: "raya.jpg",
+            unidos: "unidos.jpg"
+        }
+    }
     handleClick = (event)=>{
-        const number = parseInt(event.target.id)
-        store.dispatch({
-            type: GALERY,
-            payload:number
-        })
+        const photo = ['mulan.jpg', 'raya.jpg', 'unidos.jpg']
+    
+        if(event.target.id !== ""){
+            let number = event.target.id
+            return this.setState({
+                photo: photo[number]
+            })
+        }
+
     }
     render(){
-        const state = store.getState();
-        const photo = state.photo;
-        const galeira = new galery(photo)
+        const { photo } = this.state;
+        const galeira = new galery({photo: photo})
         return Slider({
             children: [galeira, 
                 wrapperInput({
                     onClick: this.handleClick,
                     children:[
                         button({
+                            onClick: this.handleClick,
                             id:'0'
                         }),
                         button({
+                            onClick: this.handleClick,
                             id:'1'
                         }),
                         button({
+                            onClick: this.handleClick,
                             id:'2'
                         })
                     ]

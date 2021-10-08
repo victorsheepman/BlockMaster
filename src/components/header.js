@@ -68,6 +68,14 @@ const img = styled.img`
     width: 24px;
     height: 24px;
 `
+const header = styled.header`
+    min-width: 320px;
+    width: 100%;
+    height: 56px;
+
+
+`
+
 class Header extends Component{
    
     render(){
