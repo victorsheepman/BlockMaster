@@ -1,13 +1,13 @@
 function movieListAsMap(newList, oldList = new Map()) {
     return newList.reduce((list, movie) => {
-      list.set(movie.id, movie)
+      list.set(movie.name.common, movie)
       return list
     }, oldList)
 }
   
   
 function getAllIds(list, oldList = []) {
-    return oldList.concat(list.map(movie => movie.id))
+    return oldList.concat(list.map(movie => movie.name.common))
   }
   
 function getMostValuedIds(list,oldList = []) {

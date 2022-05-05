@@ -7,4 +7,14 @@
     justify-content: space-around;
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    animation: open 0.5s forwards linear;
+}
+
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

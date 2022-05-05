@@ -36,7 +36,7 @@ class slider extends Component{
             unidos: "unidos.jpg"
         }
     }
-    handleClick = (event)=>{
+   /* handleClick = (event)=>{
         const photo = ['mulan.jpg', 'raya.jpg', 'unidos.jpg']
     
         if(event.target.id !== ""){
@@ -46,25 +46,21 @@ class slider extends Component{
             })
         }
 
-    }
+    }*/
     render(){
         const { photo } = this.state;
         const galeira = new galery({photo: photo})
         return Slider({
             children: [galeira, 
                 wrapperInput({
-                    onClick: this.handleClick,
                     children:[
                         button({
-                            onClick: this.handleClick,
                             id:'0'
                         }),
                         button({
-                            onClick: this.handleClick,
                             id:'1'
                         }),
                         button({
-                            onClick: this.handleClick,
                             id:'2'
                         })
                     ]

@@ -4,7 +4,7 @@ import store from "../store";
 import { SEARCH_MOVIE, SET_FILTER } from "../actions";
 const input = styled.input`
     height: 44px;   
-    width: 605.1942749023438px;
+    width: 605px;
     border-radius: 8px 0 0 8px;
     border: 1px solid #FED941;
     padding-left: 12px;
